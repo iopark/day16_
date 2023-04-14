@@ -88,107 +88,107 @@ namespace day16_test_commit
         }
 
 
-        /// <summary>
-        /// return 1 if trial is higher 
-        /// return -1 if trial is lower 
-        /// return 0 if equal 
-        /// </summary>
-        /// <param name="trial"></param>
-        /// <param name="answer"></param>
-        /// <returns></returns>
-        //public static int GameUpdate(int trial, int answer, bool complete)
-        //{
-        //    if (trial > answer)
-        //        return 1;
-        //    else if (trial < answer)
-        //        return -1;
-        //    else
-        //        complete = false;
-        //    return 0;
-        //}
+            /// <summary>
+            /// return 1 if trial is higher 
+            /// return -1 if trial is lower 
+            /// return 0 if equal 
+            /// </summary>
+            /// <param name="trial"></param>
+            /// <param name="answer"></param>
+            /// <returns></returns>
+            public static int GameUpdate(int trial, int answer, bool complete)
+            {
+                if (trial > answer)
+                    return 1;
+                else if (trial < answer)
+                    return -1;
+                else
+                    complete = false;
+                return 0;
+            }
 
 
-        //public static void GameOutput(int evaluation)
-        //{
-        //    switch (evaluation)
-        //    {
-        //        case 1:
-        //            Console.WriteLine("커요");
-        //            break;
-        //        case -1:
-        //            Console.WriteLine("작아요");
-        //            break;
-        //        default:
-        //            Console.WriteLine("정답입니다");
-        //            break;
-        //    }
-        //}
-        ///// <summary>
-        ///// 0: player selects y
-        ///// 1: player selects n  
-        ///// </summary>
-        ///// <param name="condition"></param>
-        ///// <returns>int val, 0: lost, 1: won </returns>
-        //public static int AskCont(int evaluation)
-        //{
-        //    switch (evaluation)
-        //    {
-        //        case 0:
-        //            Console.WriteLine("승리하셨습니다, 계속하시겠습니까? y/n");
-        //            string input_winner = Console.ReadLine();
-        //            int value_winner = SortYN(input_winner);
-        //            return value_winner;
-        //        default:
-        //            Console.WriteLine("턴을 전부 소진하셨습니다 다시 시작하시겠습니까? y/n");
-        //            string input = Console.ReadLine();
-        //            int value = SortYN(input); // returns 1for yes, 0 for no 
-        //            return value;
-        //    }
-        //    return -1;
-        //}
-        ///// <summary>
-        ///// 
-        ///// </summary>
-        ///// <param name="yield"></param>
-        ///// <param name="complete"></param>
-        ///// <param name="evaluation"></param>
-        ///// <param name="turn"></param>
-        //public static (bool, bool, int, int, bool) GameEvaluate(bool yield, bool complete, int evaluation, int turn, bool restart)
-        //{
-        //    int yield_ = -1;
-        //    if (turn == 10 && complete == true)
-        //    {
+            //public static void GameOutput(int evaluation)
+            //{
+            //    switch (evaluation)
+            //    {
+            //        case 1:
+            //            Console.WriteLine("커요");
+            //            break;
+            //        case -1:
+            //            Console.WriteLine("작아요");
+            //            break;
+            //        default:
+            //            Console.WriteLine("정답입니다");
+            //            break;
+            //    }
+            //}
+            ///// <summary>
+            ///// 0: player selects y
+            ///// 1: player selects n  
+            ///// </summary>
+            ///// <param name="condition"></param>
+            ///// <returns>int val, 0: lost, 1: won </returns>
+            //public static int AskCont(int evaluation)
+            //{
+            //    switch (evaluation)
+            //    {
+            //        case 0:
+            //            Console.WriteLine("승리하셨습니다, 계속하시겠습니까? y/n");
+            //            string input_winner = Console.ReadLine();
+            //            int value_winner = SortYN(input_winner);
+            //            return value_winner;
+            //        default:
+            //            Console.WriteLine("턴을 전부 소진하셨습니다 다시 시작하시겠습니까? y/n");
+            //            string input = Console.ReadLine();
+            //            int value = SortYN(input); // returns 1for yes, 0 for no 
+            //            return value;
+            //    }
+            //    return -1;
+            //}
+            ///// <summary>
+            ///// 
+            ///// </summary>
+            ///// <param name="yield"></param>
+            ///// <param name="complete"></param>
+            ///// <param name="evaluation"></param>
+            ///// <param name="turn"></param>
+            //public static (bool, bool, int, int, bool) GameEvaluate(bool yield, bool complete, int evaluation, int turn, bool restart)
+            //{
+            //    int yield_ = -1;
+            //    if (turn == 10 && complete == true)
+            //    {
 
 
-        //        yield_ = AskCont(evaluation); // 1 for yes, 0 for no 
+            //        yield_ = AskCont(evaluation); // 1 for yes, 0 for no 
 
 
-        //    }
-        //    else if (complete == false)
-        //        yield_ = AskCont(evaluation);
-        //    else
-        //        return (yield, complete, evaluation, turn, restart);
+            //    }
+            //    else if (complete == false)
+            //        yield_ = AskCont(evaluation);
+            //    else
+            //        return (yield, complete, evaluation, turn, restart);
 
 
 
-        //    switch (yield_)
-        //    {
-        //        case 1:
-        //            complete = true;
-        //            yield = true;
-        //            turn = 0;
-        //            restart = false;
-        //            break;
-        //        case 0:
-        //            complete = true;
-        //            yield = true;
+            //    switch (yield_)
+            //    {
+            //        case 1:
+            //            complete = true;
+            //            yield = true;
+            //            turn = 0;
+            //            restart = false;
+            //            break;
+            //        case 0:
+            //            complete = true;
+            //            yield = true;
 
-        //            break;
-        //        default:
-        //            Console.WriteLine("Something wrong in Evaluate");
-        //            break;
-        //    }
-        //    return (yield, complete, evaluation, turn, restart);
-        //}
-    }
+            //            break;
+            //        default:
+            //            Console.WriteLine("Something wrong in Evaluate");
+            //            break;
+            //    }
+            //    return (yield, complete, evaluation, turn, restart);
+            //}
+        }
 }
