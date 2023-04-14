@@ -10,7 +10,9 @@
             //UnresolvedMergeConflict 
             Console.WriteLine("Hello, World!");
             Console.WriteLine("Changes 1");
-            Console.WriteLine("fixed function"); 
+            Console.WriteLine("fixed function");
+            Console.WriteLine("Completely Wrong ");
+
         }
     }
 }
