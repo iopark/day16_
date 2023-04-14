@@ -108,21 +108,21 @@ namespace day16_test_commit
             }
 
 
-            //public static void GameOutput(int evaluation)
-            //{
-            //    switch (evaluation)
-            //    {
-            //        case 1:
-            //            Console.WriteLine("커요");
-            //            break;
-            //        case -1:
-            //            Console.WriteLine("작아요");
-            //            break;
-            //        default:
-            //            Console.WriteLine("정답입니다");
-            //            break;
-            //    }
-            //}
+            public static void GameOutput(int evaluation)
+            {
+                switch (evaluation)
+                {
+                    case 1:
+                        Console.WriteLine("커요");
+                        break;
+                    case -1:
+                        Console.WriteLine("작아요");
+                        break;
+                    default:
+                        Console.WriteLine("정답입니다");
+                        break;
+                }
+            }
             ///// <summary>
             ///// 0: player selects y
             ///// 1: player selects n  
@@ -191,4 +191,4 @@ namespace day16_test_commit
             //    return (yield, complete, evaluation, turn, restart);
             //}
         }
-}
+    }
