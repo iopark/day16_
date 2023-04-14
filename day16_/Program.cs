@@ -12,6 +12,7 @@
             Console.WriteLine("Changes 1");
             Console.WriteLine("fixed function");
             Console.WriteLine("Completely Wrong ");
+            Console.WriteLine("Next function");
 
         }
     }
