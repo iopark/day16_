@@ -13,7 +13,10 @@
             Console.WriteLine("fixed function");
             Console.WriteLine("Completely Wrong ");
             Console.WriteLine("Next function");
-            Console.WriteLine("New Function"); 
+            Console.WriteLine("New Function");
+            Console.WriteLine("Rule number 1"); 
+            
+
         }
     }
 }
