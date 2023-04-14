@@ -146,49 +146,49 @@ namespace day16_test_commit
             }
             return -1;
         }
-        ///// <summary>
-        ///// 
-        ///// </summary>
-        ///// <param name="yield"></param>
-        ///// <param name="complete"></param>
-        ///// <param name="evaluation"></param>
-        ///// <param name="turn"></param>
-        //public static (bool, bool, int, int, bool) GameEvaluate(bool yield, bool complete, int evaluation, int turn, bool restart)
-        //{
-        //    int yield_ = -1;
-        //    if (turn == 10 && complete == true)
-        //    {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="yield"></param>
+        /// <param name="complete"></param>
+        /// <param name="evaluation"></param>
+        /// <param name="turn"></param>
+        public static (bool, bool, int, int, bool) GameEvaluate(bool yield, bool complete, int evaluation, int turn, bool restart)
+        {
+            int yield_ = -1;
+            if (turn == 10 && complete == true)
+            {
 
 
-        //        yield_ = AskCont(evaluation); // 1 for yes, 0 for no 
+                yield_ = AskCont(evaluation); // 1 for yes, 0 for no 
 
 
-        //    }
-        //    else if (complete == false)
-        //        yield_ = AskCont(evaluation);
-        //    else
-        //        return (yield, complete, evaluation, turn, restart);
+            }
+            else if (complete == false)
+                yield_ = AskCont(evaluation);
+            else
+                return (yield, complete, evaluation, turn, restart);
 
 
 
-        //    switch (yield_)
-        //    {
-        //        case 1:
-        //            complete = true;
-        //            yield = true;
-        //            turn = 0;
-        //            restart = false;
-        //            break;
-        //        case 0:
-        //            complete = true;
-        //            yield = true;
+            switch (yield_)
+            {
+                case 1:
+                    complete = true;
+                    yield = true;
+                    turn = 0;
+                    restart = false;
+                    break;
+                case 0:
+                    complete = true;
+                    yield = true;
 
-        //            break;
-        //        default:
-        //            Console.WriteLine("Something wrong in Evaluate");
-        //            break;
-        //    }
-        //    return (yield, complete, evaluation, turn, restart);
-        //}
+                    break;
+                default:
+                    Console.WriteLine("Something wrong in Evaluate");
+                    break;
+            }
+            return (yield, complete, evaluation, turn, restart);
+        }
     }
     }
