@@ -9,7 +9,8 @@
             //UNDONE
             //UnresolvedMergeConflict 
             Console.WriteLine("Hello, World!");
-            Console.WriteLine("Changes 1"); 
+            Console.WriteLine("Changes 1");
+            Console.WriteLine("fixed function"); 
         }
     }
 }
