@@ -9,6 +9,7 @@
             //UNDONE
             //UnresolvedMergeConflict 
             Console.WriteLine("Hello, World!");
+            Console.WriteLine("Changes 1"); 
         }
     }
 }
