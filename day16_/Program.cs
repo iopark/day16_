@@ -13,6 +13,7 @@
             Console.WriteLine("fixed function");
             Console.WriteLine("Completely Wrong ");
             Console.WriteLine("Next function");
+            Console.WriteLine("New Function"); 
         }
     }
 }
