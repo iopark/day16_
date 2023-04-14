@@ -22,7 +22,7 @@ namespace day16_test_commit
             //배열의 카운트 시작은 0임으로,  
             Console.WriteLine(wordStart);
             // string.IndexOf 단어우선 검색, 있으면 시작지점 인덱스 int 값으로 반환 
-            // 없다면 -1 반환
+            // 없다면 -1 반환하는 기능 
         }
 }
 }
