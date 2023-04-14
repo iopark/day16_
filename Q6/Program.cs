@@ -9,41 +9,41 @@ namespace day16_test_commit
 
         static void Main(string[] args)
         {
-            //    Random random = new Random();
-            //    int randInt = random.Next(0, 1000);
+            Random random = new Random();
+            int randInt = random.Next(0, 1000);
 
 
 
 
-            //    bool GiveUp = true;
-            //    bool Complete = true;
-            //    bool retry = false;
-            //    int count = 0;
-            //    while (GiveUp && Complete)
-            //    {
-            //        if (GiveUp && Complete && retry)
-            //        {
-            //            Random new_random = new Random();
-            //            randInt = new_random.Next(0, 1000);
-            //            retry = false;
-            //            Console.WriteLine("Restarting with new number");
-            //        }
-            //        count++;
-            //        int attempt = GameInput(count);
+            bool GiveUp = true;
+            bool Complete = true;
+            bool retry = false;
+            int count = 0;
+            while (GiveUp && Complete)
+            {
+                if (GiveUp && Complete && retry)
+                {
+                    Random new_random = new Random();
+                    randInt = new_random.Next(0, 1000);
+                    retry = false;
+                    Console.WriteLine("Restarting with new number");
+                }
+                count++;
+                int attempt = GameInput(count);
 
 
-            //        int evaluation = GameUpdate(attempt, randInt, Complete);
+                int evaluation = GameUpdate(attempt, randInt, Complete);
 
 
-            //        GameOutput(evaluation);
+                GameOutput(evaluation);
 
 
 
 
-            //        (GiveUp, Complete, evaluation, count, retry) = GameEvaluate(GiveUp, Complete, evaluation, count, retry);
+                (GiveUp, Complete, evaluation, count, retry) = GameEvaluate(GiveUp, Complete, evaluation, count, retry);
 
 
-            //    }
+            }
 
 
 
