@@ -19,13 +19,13 @@ namespace Q8
         public void RenderMap()
         {
             StringBuilder aBlock = new StringBuilder();
-            for (int y = 5; y < 5; y++)
+            for (int y = 0; y < 5; y++)
             {
                 StringBuilder sb = new StringBuilder();
                 for (int x = 0; x < 5; x++)
                 {
 
-                    sb.Append(map.bingoMap_[y,x].ToString().PadLeft(4).PadRight(4));
+                    sb.Append(map.bingoMap_[x,y].ToString().PadLeft(4).PadRight(4));
 
                 }
                 sb.Append('\n');

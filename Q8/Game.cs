@@ -44,7 +44,7 @@ namespace Q8
         }
         public void Loop()
         {
-            //gameRender.RenderMap(); 
+            gameRender.RenderGame(); 
             gameInput.tryReceive();
             gameUpdate.Update(); 
             checkBingo = gameUpdate.checkDone(); 

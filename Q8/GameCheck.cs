@@ -59,7 +59,7 @@ namespace Q8
                 bool wholeLineChecked = true;
                 for (int x = 0; x < 5; x++)
                 {
-                    if (map.bingoMap_[y, x] != "#")
+                    if (map.bingoMap_[x, y] != "#")
                         wholeLineChecked = false;
                 }
                 if (wholeLineChecked)
