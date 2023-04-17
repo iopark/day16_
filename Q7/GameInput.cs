@@ -8,14 +8,20 @@ namespace Q7
 {
     public  enum Direction
     {
-        Up, Down, Left, Right, None
+        Up, Down, Left, Right, Done, None
     }
     public class GameInput
     {
-        public Direction direction_; 
-        public Action placedInput; 
+        Player player; 
         
-        public Direction direction ()
+        public Direction direction_;
+        public Action<Direction> userTry;
+        public GameInput(Player player)
+        {
+            this.player = player;
+        }
+
+        public Direction newDirection ()
         {
             ConsoleKeyInfo key = Console.ReadKey();
             
@@ -23,11 +29,13 @@ namespace Q7
             {
                 case ConsoleKey.UpArrow:
                 case ConsoleKey.W:
-                this.direction_ = Direction.Up; break;
+                this.direction_ = Direction.Up; 
+                break;
 
                 case ConsoleKey.DownArrow:
                 case ConsoleKey.S: 
-                this.direction_ = Direction.Down; break;
+                this.direction_ = Direction.Down; 
+                break;
 
                 case ConsoleKey.LeftArrow:
                 case ConsoleKey.A:
@@ -36,14 +44,30 @@ namespace Q7
 
                 case ConsoleKey.RightArrow:
                 case ConsoleKey.D:
-                this.direction_ = Direction.Left;
+                this.direction_ = Direction.Right;
+                break;
+
+                case ConsoleKey.Escape:
+                this.direction_ = Direction.Done;
                 break;
 
                 default:
                 this.direction_ = Direction.None;
-                    break;
+                break;
             }
             return direction_; 
+        }
+        /// <summary>
+        /// 해당 함수를 호출시, 특정 Direction을 유저에게 요구하고, 
+        /// Direction값을 다루는 다른 함수들 또한 반응을 해야만 한다. 
+        /// </summary>
+        /// <returns></returns>
+        public void playerInsert()
+        {
+            Direction new_Input = newDirection();
+            player.Move(new_Input);
+            userTry?.Invoke(new_Input);
+
         }
     }
 }
