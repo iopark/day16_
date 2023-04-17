@@ -13,6 +13,7 @@ namespace Q8
     {
         public int x;
         public int y;
+        //test 
         public Pointer(int x, int y)
         {
             this.x = x; this.y = y;
